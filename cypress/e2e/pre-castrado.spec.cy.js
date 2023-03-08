@@ -10,10 +10,10 @@ describe('Funcionalidade Pré Cadastro', () => {
     it('Deve completar o pré cadastro com sucesso no item "detalhes da conta" do menu lateral', () => {
         let nomeFaker = faker.name.firstName()
         let sobrenomeFaker = faker.name.lastName()
-        let emailFaker = faker.internet.email(nomeFaker) //vai gerar o email com o nomeFaker
+        let emailFaker = faker.internet.email(nomeFaker) 
         let senha = faker.internet.password()
 
-        cy.get('#reg_email').type(emailFaker) //vai gerar diversos emails através da biblioteca faker
+        cy.get('#reg_email').type(emailFaker) 
         cy.get('#reg_password').type(senha)
         cy.get(':nth-child(4) > .button').click()
 
